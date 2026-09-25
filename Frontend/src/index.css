@@ -30,3 +30,11 @@ html{
   color: #f5f5f5;
 }
 
+.note-create-form{
+  display: flex;
+  
+  gap: 1rem;
+  padding-inline: 3rem;
+  padding-block: 1rem;
+}
+
