@@ -10,7 +10,7 @@ function App() {
   console.log("hello integration");
 
   function fetchNotes(){
-    axios.get('http://localhost:3000/api/notes')
+    axios.get('https://full-stack-deployment-865w.onrender.com//api/notes')
   .then((res)=>{
   setNotes(res.data.notes)
   })
@@ -39,14 +39,14 @@ axios.post('http://localhost:3000/api/notes', {
 }
 
 function handleDeleteNote(noteId){
-axios.delete('http://localhost:3000/api/notes/'+noteId)
+axios.delete('https://full-stack-deployment-865w.onrender.com//api/notes/'+noteId)
 .then((res)=>{
   console.log(res.data);
   fetchNotes();
 })
 }
 function handleUpdateNote(noteId, newDescription){
-  axios.patch('http://localhost:3000/api/notes/'+noteId, { description: newDescription })
+  axios.patch('https://full-stack-deployment-865w.onrender.com/api/notes/'+noteId, { description: newDescription })
   .then((res)=>{
     console.log(res.data);
     fetchNotes();

@@ -6,7 +6,7 @@ const path = require('path')
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(express.static("./cmplt"));
+app.use(express.static("./public"));
 /**
  * post /api/notes
  * create new note and save data in mongoose database
@@ -76,7 +76,7 @@ console.log(__dirname);
 
 
 app.use('*name',(req,res)=> {
-    res.sendFile(path.join(__dirname,"..","/cmplt/assets/index.html"))
+    res.sendFile(path.join(__dirname,"..","/public/index.html"))
 })
 
 module.exports = app;
